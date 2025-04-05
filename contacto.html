@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
@@ -22,14 +22,14 @@
             <form action="#" method="POST">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
-                
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" required></textarea>
-                
-                <button type="submit">Enviar</button>
+                <button type="submit" onclick="mostrarDatos()">Enviar</button>
             </form>
         </div>
     </section>
@@ -40,5 +40,19 @@
             <p>Página realizada por Juan Ignacio Arze</p>
         </div>
     </footer>
+    <script> // sentencia de programacion
+        function mostrarDatos(){
+            event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            //recupera los valores de los campos del formulario desde el DOM
+            console.log("nombre: " + nombre);
+            console.log("apellido: " + apellido);
+            alert("Gracias por comunicarte " + nombre + " "  + apellido + ", nos estaremos comunicando en breves.");
+        }
+    </script>
+
+
+
 </body>
 </html>

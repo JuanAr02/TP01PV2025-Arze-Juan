@@ -59,10 +59,11 @@ footer{
     text-align: center;
     padding: 1rem;
     position: unset;
-    font-size: 1.2em;
+    font-size: 0.9em;
     box-sizing: border-box;
     max-width: 1400px;
     margin: auto;
+    ;
 }
 
 .gallery img {
